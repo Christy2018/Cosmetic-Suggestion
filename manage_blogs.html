@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Management</title>
+    <link rel="stylesheet" href="/static/css/admin_dashboard.css">
+    <link rel="stylesheet" href="/static/css/manage_blogs.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+</head>
+<body>
+    <header class="website-header">
+        <h1>Cosmetic Care</h1>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">Admin Panel</div>
+            <nav>
+                <ul>
+                    <li><a href="/admin/user-management">User Management</a></li>
+                    <li><a href="/admin/user-reports">User Reports</a></li>
+                    <li><a href="/admin/blog-management" class="active">Blog Management</a></li>
+                    <li><a href="/logout" class="btn btn-danger">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h2>Manage Blogs</h2>
+            <form id="blog-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="blog-image">Blog Image:</label>
+                    <input type="file" id="blog-image" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="blog-name">Blog Name:</label>
+                    <input type="text" id="blog-name" name="blog-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="blog-content">Blog Content:</label>
+                    <textarea id="blog-content" name="blog-content" style="display: none;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Save and Publish</button>
+            </form>
+
+            <h2>Existing Blogs</h2>
+            <div id="blogs-list">
+                {% if blogs %}
+                    {% for blog in blogs %}
+                        <div class="blog-item">
+                            <h3>{{ blog.title }}</h3>
+                            <p>{{ blog.content[:100] }}...</p>
+                            {% if blog.image_url %}
+                                <img src="{{ blog.image_url }}" alt="Blog Image" width="150">
+                            {% endif %}
+                            <button onclick="deleteBlog('{{ blog.id }}')" class="btn btn-danger">Delete</button>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No blogs available.</p>
+                {% endif %}
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/js/manage_blogs.js"></script>
+</body>
+</html>

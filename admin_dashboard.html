@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/static/css/admin_dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header class="website-header">
+        <h1>Cosmetic Care</h1>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">Admin Panel</div>
+            <nav>
+                <ul>
+                    <li><a href="/admin/user-management" class="{% if active_page == 'user-management' %}active{% endif %}">User Management</a></li>
+                    <li><a href="/admin/user-reports" class="{% if active_page == 'user-reports' %}active{% endif %}">User Reports</a></li>
+                    <li><a href="/admin/blog-management" class="{% if active_page == 'blog-management' %}active{% endif %}">Blog Management</a></li>
+                    <li><a href="/logout" id="logoutButton">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <section id="user-management" class="section">
+                <h2>User Management</h2>
+                <div id="user-list"></div>
+            </section>
+            <section id="blog-management" class="section">
+                <h2>Blog Management</h2>
+                <div id="blog-list"></div>
+                <button id="add-blog-button">Add New Blog Post</button>
+            </section>
+            <section id="reviews-section" class="section active">
+                <h2>User Reviews</h2>
+                <div id="reviews-container">
+                    <!-- Reviews will be dynamically populated by JavaScript -->
+                </div>
+            </section>
+            <section id="analytics-section" class="section">
+                <h2>Cosmetic Analytics</h2>
+                <div id="analytics-container">
+                    <canvas id="popular-products-chart"></canvas>
+                    <canvas id="user-preferences-chart"></canvas>
+                </div>
+            </section>
+            <div class="dashboard-cards">
+                <div class="card">
+                    <h3>Total Users</h3>
+                    <p>120</p>
+                </div>
+                <div class="card">
+                    <h3>Total Reports</h3>
+                    <p>45</p>
+                </div>
+                <div class="card">
+                    <h3>Total Blogs</h3>
+                    <p>30</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="/static/js/script.js"></script>
+    <script src="/static/js/admin_dashboard.js"></script>
+</body>
+</html>

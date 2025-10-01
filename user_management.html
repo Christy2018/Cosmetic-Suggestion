@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="/static/css/admin_dashboard.css">
+    <link rel="stylesheet" href="/static/css/user_management.css">
+</head>
+<body>
+    <header class="website-header">
+        <h1>Cosmetic Care</h1>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">Admin Panel</div>
+            <nav>
+                <ul>
+                    <li><a href="/admin/user-management" class="active">User Management</a></li>
+                    <li><a href="/admin/user-reports">User Reports</a></li>
+                    <li><a href="/admin/blog-management">Blog Management</a></li>
+                    <li><a href="/logout" class="btn btn-danger">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h2>User Management</h2>
+            <div class="search-filter-container">
+                <input type="text" id="search-input" placeholder="Search users...">
+                <select id="filter-role">
+                    <option value="">All Roles</option>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <select id="filter-status">
+                    <option value="">All Status</option>
+                    <option value="active">Active</option>
+                    <option value="blocked">Blocked</option>
+                </select>
+            </div>
+
+            <table id="user-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div class="pagination" id="pagination"></div>
+        </main>
+    </div>
+
+    <script src="/static/js/user_management.js"></script>
+</body>
+</html>

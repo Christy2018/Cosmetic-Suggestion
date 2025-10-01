@@ -1,0 +1,68 @@
+<script>
+// Override the default alert function to see where it's being called from
+const originalAlert = window.alert;
+window.alert = function(message) {
+    console.log("Alert called with message:", message);
+    console.trace("Alert call stack");
+    originalAlert(message);
+};
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/css/register.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label for="name">Name: <span class="text-danger">*</span></label>
+            <input type="text" id="name" name="name" required>
+            <small class="error-message" id="nameError"></small>
+
+            <label for="email">Email: <span class="text-danger">*</span></label>
+            <input type="email" id="email" name="email" required>
+            <small class="error-message" id="emailError"></small>
+
+            <label for="password">Password: <span class="text-danger">*</span></label>
+            <input type="password" id="password" name="password" required>
+            <small class="error-message" id="passwordError"></small>
+
+            <label for="age">Age: <span class="text-danger">*</span></label>
+            <input type="number" id="age" name="age" required>
+            <small class="error-message" id="ageError"></small>
+
+            <label for="gender">Gender: <span class="text-danger">*</span></label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <small class="error-message" id="genderError"></small>
+
+            <label for="skinType">Skin Type: <span class="text-danger">*</span></label>
+            <select id="skinType" name="skinType" required>
+                <option value="">Select Skin Type</option>
+                <option value="dry">Dry</option>
+                <option value="oily">Oily</option>
+                <option value="combination">Combination</option>
+                <option value="sensitive">Sensitive</option>
+                <option value="normal">Normal</option>
+            </select>
+            <small class="error-message" id="skinTypeError"></small>
+
+            <label for="skinConditions">Skin Conditions:</label>
+            <input type="text" id="skinConditions" name="skinConditions">
+
+            <button type="submit">Register</button>
+        </form>
+
+        <p>Already have an account? <a href="/auth/login">Login here</a></p>
+    </div>
+    <script src="/static/js/register.js"></script>
+</body>
+</html>

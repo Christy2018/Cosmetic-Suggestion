@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Blogs</title>
+    <link rel="stylesheet" href="/static/css/user_dashboard.css">
+    <style>
+        .blog-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px 0;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .blog-card img {
+            max-width: 100px;
+            margin-right: 15px;
+            border-radius: 8px;
+        }
+
+        .blog-title {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .blog-content {
+            flex: 1;
+        }
+
+        .show-more-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>User Blogs</h1>
+    </header>
+
+    <div id="blogs-list">
+        <!-- Blogs will be dynamically loaded here -->
+    </div>
+    <script>
+        console.log("✅ Inline script test running...");
+    </script>
+    <script src="/static/js/user_blogs.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmetic Care</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <!-- Corrected Static CSS Link -->
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Cosmetic Care</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link custom-btn" href="/auth/register">Register</a></li>
+                <li class="nav-item"><a class="nav-link custom-btn" href="/auth/login">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Hero Section with Slideshow -->
+    <header class="hero">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/static/images/wall1.jpg" class="d-block w-100 carousel-img" alt="Skincare">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <h1>Welcome to the World of Cosmetic Care</h1>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/images/wall3.jpg" class="d-block w-100 carousel-img" alt="Cosmetics">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <h1>Discover the Best Skincare Products</h1>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="text-center py-5 section-bg">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Cosmetic Care, we believe that beauty and skincare should be as unique as you are. Our AI-powered platform is designed to analyze your skin condition and provide personalized cosmetic recommendations tailored to your needs.<br><br>
+
+               <b>What We Do</b><br>
+                ✨ AI-Driven Skin Analysis – Upload a skin image, and our advanced AI will assess your condition.<br>
+                ✨ Personalized Product Suggestions – Get expert recommendations for the best skincare products suited for you.<br>
+                ✨ Skincare Insights & Tips – Stay updated with expert blogs and the latest beauty trends.<br>
+                <br>
+                <b>Why Choose Us?</b><br>
+                ✔️ Cutting-Edge Technology – Our AI ensures accurate and reliable skin assessments.<br>
+                ✔️ Tailored to You – No more guessing! Get skincare solutions specific to your skin type.<br>
+                ✔️ Trusted & Safe – Backed by research, dermatologists, and beauty experts.<br>
+                <br>
+                <b><i>Join us on a journey to healthier, glowing skin with Cosmetic Care! 💖</i></b></p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-5 bg-light section-bg">
+        <div class="container text-center">
+            <img src="/static/images/blog1.jpg" class="card-img-top" alt="Skincare Routine">
+            <h2>Latest Cosmetic Tips</h2>
+            <p>Take care about your skin..... Ready to glow....and shine like a star. </p>
+        </div>
+        <p id="api-result">Waiting for API response...</p>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container text-center">
+            <h2>Contact Us</h2>
+            <p>Email: support@cosmeticcare.com | Phone: +123 456 7890</p>
+        </div>
+        <!-- Google Map -->
+        <div class="google-map mt-4">
+            <iframe 
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                loading="lazy" 
+                allowfullscreen 
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093746!2d144.95373531550445!3d-37.81627974202157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5776f3e9db6d3e!2sMelbourne%20CBD%2C%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1646721600000!5m2!1sen!2sus">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 custom-footer">
+        <p>&copy; 2025 Cosmetic Care. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Corrected JavaScript Link -->
+    <script src="/static/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Reports</title>
+    <link rel="stylesheet" href="/static/css/admin_dashboard.css">
+    <link rel="stylesheet" href="/static/css/user_reports.css">
+</head>
+<body>
+    <header class="website-header">
+        <h1>Cosmetic Care</h1>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">Admin Panel</div>
+            <nav>
+                <ul>
+                    <li><a href="/admin/user-management">User Management</a></li>
+                    <li><a href="/admin/user-reports" class="active">User Reports</a></li>
+                    <li><a href="/admin/blog-management">Blog Management</a></li>
+                    <li><a href="/logout" class="btn btn-danger">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h2>User Reports</h2>
+            <table id="report-table" class="table">
+                <thead>
+                    <tr>
+                        <th>User Email</th>
+                        <th>Name</th>
+                        <th>Disease Reported</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be dynamically populated by JavaScript -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <script src="/static/js/user_reports.js"></script>
+</body>
+</html>
